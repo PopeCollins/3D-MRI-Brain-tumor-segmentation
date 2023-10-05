@@ -1,8 +1,13 @@
 # 3D-MRI-Brain-tumor-segmentation
 Brain tumor segmentation using U-Net
+
+White matter, gray matter, and cerebrospinal fluid make up the majority of the brain's healthy tissues. Brain tumor segmentation seeks to identify the position and extent of tumor regions, including active tumorous tissue (vascularized or not), necrotic tissue, and edema (swelling close to the tumor). By comparing aberrant areas to normal tissue, abnormal spots might be found.
+
+
 Dataset
 
 1.1 What is an MRI?
+
 Magnetic resonance imaging (MRI) is an advanced imaging technique that is used to observe a variety of diseases and parts of the body.
 
 As we will see later, neural networks can analyze these images individually (as a radiologist would) or combine them into a single 3D volume to make predictions.
@@ -13,7 +18,7 @@ At a high level, MRI works by measuring the radio waves emitted by atoms subject
 We often encounter MR images in the DICOM format.
 
 The DICOM format is the output format for most commercial MRI scanners. This type of data can be processed using the pydicom Python library.
-we will be using the data from the Decathlon 10 Challenge. This data has been mostly pre-processed for the competition participants, however in real practice, MRI data needs to be significantly pre-preprocessed before we can use it to train our models.
+we will be using the data from the [Decathlon 10 Challenge](https://decathlon-10.grand-challenge.org/). This data has been mostly pre-processed for the competition participants, however in real practice, MRI data needs to be significantly pre-preprocessed before we can use it to train our models.
 
 
 1.3 Exploring the Dataset
@@ -45,7 +50,7 @@ We'll use the NiBabel library to load the image and label for a case. The functi
 
 # Image data descriptions
 
-All BraTS multimodal scans are available as  NIfTI files (.nii.gz) -> commonly used medical imaging format to store brain imagin data obtained using MRI and describe different MRI settings 
+All BraTS multimodal scans are available as  NIfTI files (.nii.gz) -> commonly used medical imaging format to store brain imaging data obtained using MRI and describe different MRI settings 
 1. **T1**: T1-weighted, native image, sagittal or axial 2D acquisitions, with 1–6 mm slice thickness.
 2. **T1c**: T1-weighted, contrast-enhanced (Gadolinium) image, with 3D acquisition and 1 mm isotropic voxel size for most patients.
 3. **T2**: T2-weighted image, axial 2D acquisition, with 2–6 mm slice thickness.
